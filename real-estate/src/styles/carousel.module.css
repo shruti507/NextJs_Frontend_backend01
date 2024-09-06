@@ -1,0 +1,17 @@
+.carousel-container {
+    max-width: 100%;
+    margin: 0 auto; /* Centers the carousel horizontally */
+    overflow: hidden; /* Ensures the carousel doesn't overflow the container */
+  }
+  
+  .carousel-item img {
+    object-fit: cover; /* Ensures images cover the entire carousel item without distortion */
+    height: 100vh; /* Adjust height as needed */
+    /* max-height: 600px; Optional: limits maximum height for very large images */
+  }
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Optional: adds a dark background for better text readability */
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }

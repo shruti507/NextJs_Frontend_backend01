@@ -1,0 +1,70 @@
+/* styles/Header.module.css */
+.header {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 1rem 2rem; /* Padding around the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .navbar-brand h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-brand .text-primary {
+    color: #007bff; /* Primary color */
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+    color: #007bff; /* Highlight color for active link */
+  }
+  
+  .btn {
+    border-radius: 0.25rem; /* Rounded corners for buttons */
+  }
+  
+  .btn-outline-success {
+    border-color: #28a745; /* Green border color */
+    color: #28a745; /* Green text color */
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #28a745; /* Green background on hover */
+    color: #fff; /* White text on hover */
+  }
+  
+  .btn-info {
+    background-color: #17a2b8; /* Info button color */
+    color: #fff; /* White text color */
+  }
+  
+  .btn-info:hover {
+    background-color: #138496; /* Darker shade on hover */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Danger button color */
+    color: #fff; /* White text color */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Darker shade on hover */
+  }
+  
+  .form-control {
+    border-radius: 0.25rem; /* Rounded corners for input fields */
+  }
+  
+  .header .navbar-toggler {
+    border: none; /* Remove default border from the toggle button */
+  }
+  
+  .header .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,...'); /* Use a custom icon */
+  }
+  
