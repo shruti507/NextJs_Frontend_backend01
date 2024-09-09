@@ -80,6 +80,8 @@ const AddProperty = () => {
         images: '',
         contactInfo: ''
       });
+
+      route.push('/');
     } catch (error: any) {
       Swal.fire({
         title: 'Error!',
@@ -99,6 +101,8 @@ const AddProperty = () => {
       [id]: value
     }));
   };
+
+  const route = useRouter();
 
   return (
     <>

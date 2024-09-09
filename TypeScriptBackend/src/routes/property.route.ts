@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
-import auth from '../middleware/auth'; // Update to TypeScript import
+// import auth from '../middleware/auth'; // Update to TypeScript import
 import {
   createProperty,
   getAllProperties,
@@ -20,7 +20,9 @@ const router = express.Router(); // Initialize router
 router.post("/createProperty", createProperty);
 
 // Route to add a property with authentication middleware
-router.post("/add-property", auth, addProperty);
+router.post("/add-property", 
+  // auth,
+   addProperty);
 
 // Route to get all properties
 router.get("/viewProperties", getAllProperties);

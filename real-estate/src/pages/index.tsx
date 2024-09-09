@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import link from "next/link";
+import Link from "next/link";
 import { useState } from "react";
 import SignUp from "./auth/sign-up";
 import CarCarousel from "../components/carousal";
@@ -10,16 +10,17 @@ import About from "./navbar/about";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Home page component
 export default function Home() {
   const [properties, setProperties] = useState<any[]>([]);
-  console.log("Seacrh property", properties);
+  console.log("Seacrh property", properties); // Log properties for debugging
 
   return (
     <div>
-      <Header setProperties={setProperties} />
-      <CarCarousel />
-      <DummyProperty properties={properties} />
-      <About />
+      <Header setProperties={setProperties} />  {/* Header with property setter */}
+      <CarCarousel />  {/* Carousel component */}
+      <DummyProperty properties={properties} />    {/* Display properties */}
+      <About />  {/* About section */}
       <main
         className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
       ></main>

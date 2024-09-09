@@ -19,9 +19,9 @@
 //     try {
 //         const decoded = jwt.verify(token, 'secret') as DecodedToken; // Verify the token using the secret key and cast to DecodedToken
 //         req.user = decoded; // Attach the decoded user information to the request object
+
 //         next(); // Proceed to the next middleware or route handler
 //     } catch (err) {
 //         res.status(400).json({ msg: 'Token is not valid' }); // If token verification fails, respond with a 400 status code and an error message
 //     }
 // }
-

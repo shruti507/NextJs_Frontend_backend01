@@ -194,18 +194,18 @@ export const getFavorites = async (req: Request, res: Response): Promise<Respons
 
 // Remove Property from favorites
 export const unmarkAsFavorite = async (req: Request, res: Response): Promise<Response> => {
+   
     try {
         console.log(req.params);
-        console.log(req.body);
-        const { propertyId, userId } = req.body; // Extract propertyId and userId from the request body
+        const { propertyId, userId } = req.params; // Extract propertyId and userId from the request body
         const property = await Property.findById(propertyId);
         
         if (!property) return res.status(404).json({ msg: 'Property not found' });
 
         // Check if userId is in the favorites array
-        if (!property.favorites.includes(userId)) {
-            return res.status(400).json({ msg: 'Property is not in favorites' });
-        }
+        // if (!property.favorites.includes(userId)) {
+        //     return res.status(400).json({ msg: 'Property is not in favorites' });
+        // }
         
         // Remove userId from the favorites array
         property.favorites = property.favorites.filter(id => id.toString() !== userId.toString());
@@ -214,7 +214,8 @@ export const unmarkAsFavorite = async (req: Request, res: Response): Promise<Res
         
         return res.status(200).json(property);
     } catch (err) {
-        console.error(err);
+        console.log('Hello');
+        console.log(err);
         return res.status(500).json({ msg: 'Server error', err });
     }
 };

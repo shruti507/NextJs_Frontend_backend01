@@ -49,6 +49,7 @@
 
 // export default app;
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 import express, { Application } from "express";
 import bodyParser from "body-parser";
@@ -62,7 +63,6 @@ import PropertyRouter from "./routes/property.route";
 // import auth from "./middleware/auth"
 
 dotenv.config();
-
 const app: Application = express(); // Define the app variable as an Express Application
 
 // Middleware

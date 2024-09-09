@@ -89,7 +89,7 @@ const DummyProperty = ({ properties }: DummyPropertyProps) => {
         {itemList.length === 0 ? (
           <div className="container d-flex justify-content-center align-items-center">
             <Image
-              src="public/images/NoData.png"
+              src="/public/images/NoData.jpg"
               alt="No data"
               width={400}
               height={400}

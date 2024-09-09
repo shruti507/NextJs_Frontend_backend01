@@ -10,6 +10,7 @@ interface HeaderProps {
   setProperties: (properties: any[]) => void;
 }
 
+// Header component to manage authentication state and search functionality
 const Header = ({ setProperties }: HeaderProps) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const router = useRouter();
@@ -18,20 +19,24 @@ const Header = ({ setProperties }: HeaderProps) => {
 
   const route = useRouter();
 
+  // Check authentication status on component mount
   useEffect(() => {
     const token =
       localStorage.getItem("userId") || sessionStorage.getItem("token");
     setIsAuthenticated(!!token);
   }, []);
 
+   // Navigate to add property page
   const handleAddPropertyClick = () => {
     router.push("/property/add-property");
   };
 
+   // Navigate to login page
   const handleLoginClick = () => {
     router.push("/auth/sign-in");
   };
 
+  // Handle logout and redirect to home
   const handleLogoutClick = () => {
     localStorage.removeItem("userId");
     sessionStorage.removeItem("userId");
@@ -39,6 +44,7 @@ const Header = ({ setProperties }: HeaderProps) => {
     router.push("/");
   };
 
+  // Fetch filtered properties and navigate to search page
   const fetchFilteredProperties = async (term: string) => {
     const url = `${process.env.NEXT_PUBLIC_PROPERTY_SEARCH_URL}?address=${term}`;
     try {
@@ -56,6 +62,7 @@ const Header = ({ setProperties }: HeaderProps) => {
     }
   };
 
+   // Handle search input change with debouncing
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSearchTerm(value);
@@ -126,9 +133,9 @@ const Header = ({ setProperties }: HeaderProps) => {
               placeholder="Enter location.."
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
+            {/* <button className="btn btn-outline-success" type="submit">
               Search
-            </button>
+            </button> */}
           </form>
           <div className="d-flex ms-2">
             {isAuthenticated ? (

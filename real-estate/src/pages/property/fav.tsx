@@ -73,6 +73,7 @@ const Favorite = () => {
     } catch (error) {
       console.error('Error deleting favorite:', error);
       Swal.fire('Error!', 'Failed to delete the property. Please try again.', 'error');
+      console.log(error)
     }
   };
 

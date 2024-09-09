@@ -1,7 +1,7 @@
 // Import necessary modules and functions
 import express, { Router } from "express";
 import { register, registerMultipleUsers, signIn } from "../controller/user.controller";
-import auth from '../middleware/auth'; // Adjust import path if necessary
+// import auth from '../middleware/auth'; // Adjust import path if necessary
 
 // Initialize router
 const router: Router = express.Router();
